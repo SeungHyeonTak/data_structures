@@ -1,0 +1,1 @@
+# 리스트 원소 합"""입력으로 주어지는 리스트 x의 첫 원소와 마지막 원소의 합을 리턴하는 함수 solution()을 완성하라ex)>> 10<< 11 (1+10)"""def solution(x):    answer = 0    answer = x[0]+x[-1]    return answerif __name__ == "__main__":    x = [5,4,2,1]    print(solution(x))
