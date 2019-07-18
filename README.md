@@ -81,4 +81,53 @@ del(li[2]) -> li[2]인 30을 삭제 하고 index를 하나씩 앞당긴다.
 - 한 번 비교가 일어날 때마다 리스트 반씩 줄임 (divide & conquer) -> O(log n)
 
 ```
-  - 이진탐색 - Binary_Search.py
+이진탐색 - Binary_Search.py
+
+* 재귀 알고리즘 - 기초
+(Recursive Algorithms)
+
+재귀 함수란? <br>
+하나의 함수에서 자신을 다시 호출하여 작업을 수행하는 것<br>
+ex) 이진 트리(binary trees)<br>
+* 간단한 예 - 자연수의 합 구하기 <br>
+1부터 n까지 모든 자연수의 합 구하기 <br>
+```python
+# 재귀를 쓴 코드 (Recursive version)
+def sum(num):
+    if num <= 1:
+        return num
+    else:
+        return num + sum(num-1)
+
+a = int(input('number : '))
+print(sum(a))
+# 재귀함수에서는 종결 조건이 매우 중요하다
+
+
+# 재귀를 안쓴 코드 (Iterative version)
+def a(n):
+    s = 0
+    while n>=0:
+        s += n
+        n -= 1
+    return s
+    
+# 추가 예제 (펙토리얼)
+def what(n):
+    if n <= 1:
+        return 1
+    else:
+        return n * what(n-1)
+
+```
+연습 문제 <br>
+-Fibonacci 순열 <br>
+F(0) = 0 <br>
+F(1) = 1 <br>
+F(n) = F(n-1)+F(n-2), n >= 2<br>
+
+0,1,1,2,3,5,8,12 <br>
+
+Iterative version / Recursive version 으로 작성 해보기 <br>
+
+
