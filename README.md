@@ -67,7 +67,8 @@ del(li[2]) -> li[2]인 30을 삭제 하고 index를 하나씩 앞당긴다.
   * Lambda식에 대해
     * 익명함수 : 메모리를 아끼고 가독성을 향상 시킨다.
     * 익명함수이기 때문에 한번 쓰이고 다음줄로 넘어가면 힙 메모리 영역에서 증발
-    
+*****
+이진탐색
 ```text
 # 탐색 알고리즘 1 - 선형탐색(Linear Search)
 - 순차적으로 하나하나 비교해나가며 원하는 리스트를 찾는것
@@ -82,7 +83,7 @@ del(li[2]) -> li[2]인 30을 삭제 하고 index를 하나씩 앞당긴다.
 
 ```
 이진탐색 - Binary_Search.py
-
+*****
 * 재귀 알고리즘 - 기초
 (Recursive Algorithms)
 
@@ -129,5 +130,38 @@ F(n) = F(n-1)+F(n-2), n >= 2<br>
 0,1,1,2,3,5,8,12 <br>
 
 Iterative version / Recursive version 으로 작성 해보기 <br>
+*****
+재귀함수 -응용- <br>
 
+재귀함수가 어쩔땐 비효율적이나 꼭 재귀를 써야하는 상황에서는 interative한 함수보다 성능이 더 좋다.<br>
+재귀적인 방법의 문제<br>
+문제 : n개의 서로 다른 원소에서 m개를 택하는 경우의 수 <br>
 
+```python
+#[연습문제]
+#* 재귀적 이진 탐색
+# L->원소가 담겨있는 List
+# x -> 찾을 원소의 값
+# lower -> 왼쪽값
+# upper -> 오른쪽값
+
+def function(L, x, lower, upper):
+    if lower > upper:
+        return -1
+    mid = (lower + upper) // 2
+    if x == L[mid]:
+        return mid
+    # 재귀적 함수로 구현
+    elif x < L[mid]:
+        return function(L,x,lower,mid-1)
+    else:
+        return function(L,x,mid+1,upper)
+# 풀이
+
+# 첫번째 if는 값이 없을경우 반환하는 구문이다.
+# lower와 upper중 upper는 항상 lower보다 커야하는데, 내가 찾는 값이 없을경우
+# upper가 lower보다 낮아지므로 lower > upper가 되면 반환이 되게 하는것이 맞다.
+# 또한 시간적으로도 단축되는 효율성이 있는 부분이다.
+
+# 두번째 위 문제는 이진트리이지만 재귀함수를 넣어서 풀었으므로 기본적인 방식으로 구현해볼 수 있다.
+```
