@@ -1,0 +1,1 @@
+# 프로그래머스# 수박수박수박수박수박수?def solution(n):    answer = ''    for i in range(1, n + 1):        answer = '수'        if n % 2 == 0:            answer = '박'    return answerif __name__ == "__main__":    n = 4    print(solution(n))
