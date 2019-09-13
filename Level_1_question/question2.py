@@ -1,1 +1,0 @@
-# 프로그래머스# 수박수박수박수박수박수?def solution(n):    return ('수박'*n)[:n]if __name__ == "__main__":    n = 1    print(solution(n))
