@@ -206,6 +206,7 @@ ex) n개의 크기 순으로 정렬된 수에서 특정 값을 찾기위해 이�
   * Data
     * ex) 정수, 문자열, 레코드
   * A set of operations
+  * A set of operations
     * 삽입, 삭제, 순회
     * 정렬, 탐색, ...
     
