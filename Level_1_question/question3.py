@@ -1,1 +1,1 @@
-# 완주하지 못한 선수
+# 완주하지 못한 선수class Node:    def __init__(self):        self.data = None# git ^M에 의한 test commit
