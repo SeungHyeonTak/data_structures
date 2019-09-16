@@ -1,0 +1,1 @@
+# 예산def solution(d, budget):    answer = 0    result = 0    d.sort()    for i in d:        if result + i <= budget:            result += i            answer += 1        else:            break    return answerif __name__ == "__main__":    d = [1, 3, 2, 5, 4]  # 부서별 신청 금액    budget = 9  # 지원 예산 금액    print(solution(d, budget))
