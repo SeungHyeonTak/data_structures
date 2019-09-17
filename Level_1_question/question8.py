@@ -1,0 +1,1 @@
+# 서울에서 김서방 찾기def solution(L):    for i, v in enumerate(L):        if v == 'Kim':            answer = f'김서방은 {i}에 있다.'    return answerif __name__ == "__main__":    L = ['Jane', "Tak", "Kim"]    print(solution(L))
